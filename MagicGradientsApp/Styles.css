@@ -1,7 +1,7 @@
-﻿.magicGradient {
+﻿.MagicGradient {
     background: linear-gradient(90deg, rgb(255,0,0), rgb(0,255,0));
 }
 
-.brushGradient {
+.BrushGradient {
     background: linear-gradient(90deg, rgb(255,0,0) 0%, rgb(0,255,0) 100%);
 }

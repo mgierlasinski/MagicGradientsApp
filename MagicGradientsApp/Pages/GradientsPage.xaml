@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             x:Class="MagicGradientsApp.Pages.GradientsPage"
+             Title="Magic Gradients">
+
+    <ScrollView>
+        <StackLayout Margin="15" Spacing="15">
+            <Frame StyleClass="SnippetFrame">
+                <magic:GradientView VerticalOptions="FillAndExpand">
+                    <magic:LinearGradient>
+                        <magic:GradientStop Color="Yellow" />
+                        <magic:GradientStop Color="Blue" />
+                        <magic:GradientStop Color="Pink" />
+                    </magic:LinearGradient>
+                </magic:GradientView>
+            </Frame>
+            <Frame StyleClass="SnippetFrame">
+                <magic:GradientView VerticalOptions="FillAndExpand">
+                    <magic:CssGradientSource>
+                        <x:String>
+                            <![CDATA[ linear-gradient(242deg, red, green, orange) ]]>
+                        </x:String>
+                    </magic:CssGradientSource>
+                </magic:GradientView>
+            </Frame>
+            <Frame StyleClass="SnippetFrame">
+                <magic:GradientView VerticalOptions="FillAndExpand" StyleClass="MagicGradient" />
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

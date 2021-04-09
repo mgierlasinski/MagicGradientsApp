@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MagicGradientsApp.Pages.BrushesPage"
+             Title="Xamarin Forms Brushes">
+
+    <StackLayout Margin="15" Spacing="15">
+        <Frame StyleClass="SnippetFrame">
+            <BoxView VerticalOptions="FillAndExpand">
+                <BoxView.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="Yellow" Offset="0" />
+                        <GradientStop Color="Blue" Offset="0.5" />
+                        <GradientStop Color="Pink" Offset="1" />
+                    </LinearGradientBrush>
+                </BoxView.Background>
+            </BoxView>
+        </Frame>
+        <Frame StyleClass="SnippetFrame">
+            <BoxView VerticalOptions="FillAndExpand" StyleClass="BrushGradient" />
+        </Frame>
+    </StackLayout>
+
+</ContentPage>

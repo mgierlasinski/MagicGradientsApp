@@ -4,5 +4,9 @@
              x:Class="MagicGradientsApp.App">
     <Application.Resources>
         <StyleSheet Source="/Styles.css" />
+        <Style TargetType="Frame" Class="SnippetFrame">
+            <Setter Property="HeightRequest" Value="200" />
+            <Setter Property="Padding" Value="0" />
+        </Style>
     </Application.Resources>
 </Application>
