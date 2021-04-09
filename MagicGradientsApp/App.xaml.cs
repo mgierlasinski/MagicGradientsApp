@@ -9,6 +9,8 @@ namespace MagicGradientsApp
         {
             InitializeComponent();
 
+            MagicGradients.Initializer.Init();
+
             MainPage = new NavigationPage(new MainPage());
         }
 

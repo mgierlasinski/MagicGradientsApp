@@ -3,8 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MagicGradientsApp.App">
     <Application.Resources>
+        <Color x:Key="BackgroundContrastColor">#FFFFFF</Color>
+        <Color x:Key="BackgroundContrastColorDark">#242526</Color>
         <StyleSheet Source="/Styles.css" />
         <Style TargetType="Frame" Class="SnippetFrame">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource BackgroundContrastColor}, Dark={StaticResource BackgroundContrastColorDark}}" />
+            <Setter Property="HasShadow" Value="True" />
+            <Setter Property="CornerRadius" Value="5" />
             <Setter Property="HeightRequest" Value="200" />
             <Setter Property="Padding" Value="0" />
         </Style>
