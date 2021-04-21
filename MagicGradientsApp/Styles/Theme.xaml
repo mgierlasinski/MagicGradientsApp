@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!-- Light -->
+    <Color x:Key="AccentColor">#1790F9</Color>
+    <!--<Color x:Key="BackgroundColor">#F0F2F5</Color>
+    <Color x:Key="BackgroundContrastColor">#FFFFFF</Color>
+    <Color x:Key="TextColor">#050505</Color>-->
+
+    <!-- Github Light -->
+    <Color x:Key="BackgroundColor">#FFFFFF</Color>
+    <Color x:Key="BackgroundContrastColor">#FAFBFC</Color>
+    <Color x:Key="TextColor">#24292E</Color>
+    <Color x:Key="SeparatorColor">#EAECEF</Color>
+
+    <!-- Dark -->
+    <Color x:Key="BackgroundColorDark">#18191A</Color>
+    <Color x:Key="BackgroundContrastColorDark">#242526</Color>
+    <Color x:Key="TextColorDark">#E4E6EB</Color>
+    <Color x:Key="SeparatorColorDark">#3A3B3C</Color>
+
+    <!-- Styles -->
+    <Style TargetType="Page" ApplyToDerivedTypes="True">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource BackgroundColor}, Dark={StaticResource BackgroundColorDark}}" />
+    </Style>
+    <Style TargetType="NavigationPage" ApplyToDerivedTypes="True">
+        <Setter Property="BarBackgroundColor" Value="{StaticResource AccentColor}" />
+        <Setter Property="BarTextColor" Value="White" />
+    </Style>
+    <Style TargetType="Label">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource TextColor}, Dark={StaticResource TextColorDark}}" />
+    </Style>
+    <Style TargetType="Frame" Class="SnippetFrame">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource BackgroundContrastColor}, Dark={StaticResource BackgroundContrastColorDark}}" />
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource SeparatorColor}, Dark={StaticResource SeparatorColorDark}}" />
+        <Setter Property="HasShadow" Value="True" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="IsClippedToBounds" Value="True" />
+        <Setter Property="HeightRequest" Value="200" />
+        <Setter Property="Padding" Value="0" />
+    </Style>
+</ResourceDictionary>
