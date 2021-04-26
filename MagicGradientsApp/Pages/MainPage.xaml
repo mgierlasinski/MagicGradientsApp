@@ -24,6 +24,7 @@
 
         <StackLayout Margin="20">
             <Button Text="Gradients" Command="{p:Navigate {x:Type p:GradientsPage}}" />
+            <Button Text="Masks" Command="{p:Navigate {x:Type p:MasksPage}}" />
             <Button Text="Brushes" Command="{p:Navigate {x:Type p:BrushesPage}}" />
         </StackLayout>
 

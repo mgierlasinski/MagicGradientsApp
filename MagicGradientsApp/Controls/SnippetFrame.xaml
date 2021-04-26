@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:MagicGradientsApp.Controls;assembly=MagicGradientsApp"
+             x:Class="MagicGradientsApp.Controls.SnippetFrame"
+             x:Name="TemplateRoot">
+    <ContentView.Resources>
+        <controls:StringToVisibleConverter x:Key="VisibilityConverter" />
+    </ContentView.Resources>
+
+    <ContentView.ControlTemplate>
+        <ControlTemplate>
+            <Frame x:Name="BorderFrame" StyleClass="SnippetFrame">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Snapshot">
+                            <VisualState.StateTriggers>
+                                <StateTrigger IsActive="{Binding IsSnapshot, Source={x:Reference TemplateRoot}}" />
+                            </VisualState.StateTriggers>
+                            <VisualState.Setters>
+                                <Setter TargetName="BorderFrame" Property="Frame.CornerRadius" Value="0,0,0,0" />
+                                <Setter TargetName="TitleLabel" Property="VisualElement.IsVisible" Value="False" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+                <Grid RowDefinitions="*,Auto" RowSpacing="0">
+                    <ContentPresenter />
+                    <Label x:Name="TitleLabel" 
+                           Text="{Binding Title, Source={x:RelativeSource TemplatedParent}}" 
+                           IsVisible="{Binding Title, Source={x:RelativeSource TemplatedParent}, Converter={StaticResource VisibilityConverter}}"
+                           FontAttributes="Bold" FontSize="14"
+                           HorizontalOptions="Center" Margin="0,5" Grid.Row="1" />
+                </Grid>
+            </Frame>
+        </ControlTemplate>
+    </ContentView.ControlTemplate>
+</ContentView>

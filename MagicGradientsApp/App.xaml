@@ -3,10 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MagicGradientsApp.App">
     <Application.Resources>
-        <StyleSheet Source="/Styles.css" />
-        <Style TargetType="Frame" Class="SnippetFrame">
-            <Setter Property="HeightRequest" Value="200" />
-            <Setter Property="Padding" Value="0" />
-        </Style>
+        <StyleSheet Source="/Styles/Styles.css" />
+        <ResourceDictionary Source="Styles/Theme.xaml" />
     </Application.Resources>
 </Application>
