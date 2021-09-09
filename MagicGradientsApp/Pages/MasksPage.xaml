@@ -5,8 +5,8 @@
              xmlns:controls="clr-namespace:MagicGradientsApp.Controls;assembly=MagicGradientsApp"
              x:Class="MagicGradientsApp.Pages.MasksPage"
              Title="Masks">
-
     <ScrollView>
+        <!-- Path Mask with ClipMode -->
         <StackLayout Margin="15" Spacing="15">
             <controls:SnippetFrame Title="ClipMode: Include">
                 <magic:GradientView StyleClass="RainbowGradient" WidthRequest="180" Margin="15" HorizontalOptions="Center">
@@ -25,6 +25,8 @@
                     </magic:GradientView.Mask>
                 </magic:GradientView>
             </controls:SnippetFrame>
+
+            <!-- Rectangle Mask -->
             <controls:SnippetFrame Title="Rectangle Mask">
                 <magic:GradientView StyleClass="RainbowGradient">
                     <magic:GradientView.Mask>
@@ -47,6 +49,8 @@
                     </magic:GradientView.Mask>
                 </magic:GradientView>
             </controls:SnippetFrame>
+
+            <!-- Ellipse Mask -->
             <controls:SnippetFrame Title="Ellipse Mask">
                 <magic:GradientView StyleClass="RainbowGradient">
                     <magic:GradientView.Mask>
@@ -57,6 +61,8 @@
             <controls:SnippetFrame Title="Circle Mask">
                 <magic:GradientView Mask="{magic:Ellipse '150,150'}" StyleClass="RainbowGradient" />
             </controls:SnippetFrame>
+
+            <!-- Text Mask -->
             <controls:SnippetFrame Title="Text Mask">
                 <magic:GradientView StyleClass="RainbowGradient" Margin="15">
                     <magic:GradientView.Mask>
@@ -67,10 +73,20 @@
             <controls:SnippetFrame Title="Text Mask Exclude">
                 <magic:GradientView Mask="{magic:Text 'Magic!', Stretch=AspectFit, ClipMode=Exclude, FontAttributes=Italic}" StyleClass="RainbowGradient" />
             </controls:SnippetFrame>
+            <controls:SnippetFrame Title="Text Alignment">
+                <Grid>
+                    <magic:GradientView Mask="{magic:Text 'Magic', HorizontalTextAlignment=Start, VerticalTextAlignment=Start, FontSize=60}" StyleClass="RainbowGradient" />
+                    <magic:GradientView Mask="{magic:Text 'Gradients', HorizontalTextAlignment=End, VerticalTextAlignment=End, FontSize=60}" StyleClass="RainbowGradient" />
+                </Grid>
+            </controls:SnippetFrame>
+
+            <!-- Path Mask -->
             <controls:SnippetFrame Title="Path Mask">
                 <magic:GradientView Mask="{magic:Path 'M 0 -100 L 58.8 90.9, -95.1 -30.9, 95.1 -30.9, -58.8 80.9 Z', Stretch=AspectFit}"
                                     StyleClass="RainbowGradient" WidthRequest="170" Margin="15" HorizontalOptions="Center" />
             </controls:SnippetFrame>
+
+            <!-- Mask Collection -->
             <controls:SnippetFrame Title="Mask Collection">
                 <magic:GradientView StyleClass="RainbowGradient" WidthRequest="200" HorizontalOptions="Center">
                     <magic:GradientView.Mask>
@@ -85,5 +101,4 @@
             </controls:SnippetFrame>
         </StackLayout>
     </ScrollView>
-
 </ContentPage>
