@@ -4,7 +4,6 @@
              xmlns:magic="http://magic.com/schemas/gradients"
              x:Class="MagicGradientsApp.Pages.GradientsPage"
              Title="Magic Gradients">
-
     <ScrollView>
         <StackLayout Margin="15" Spacing="15">
             <Frame StyleClass="SnippetFrame">
@@ -17,18 +16,11 @@
                 </magic:GradientView>
             </Frame>
             <Frame StyleClass="SnippetFrame">
-                <magic:GradientView VerticalOptions="FillAndExpand">
-                    <magic:CssGradientSource>
-                        <x:String>
-                            <![CDATA[ linear-gradient(242deg, red, green, orange) ]]>
-                        </x:String>
-                    </magic:CssGradientSource>
-                </magic:GradientView>
+                <magic:GradientView GradientSource="linear-gradient(242deg, red, green, orange)" VerticalOptions="FillAndExpand" />
             </Frame>
             <Frame StyleClass="SnippetFrame">
-                <magic:GradientView VerticalOptions="FillAndExpand" StyleClass="MagicGradient" />
+                <magic:GradientView StyleClass="MagicGradient" VerticalOptions="FillAndExpand" />
             </Frame>
         </StackLayout>
     </ScrollView>
-
 </ContentPage>
